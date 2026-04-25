@@ -1,3 +1,72 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-.venv/
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+*.egg
+.installed.cfg
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+
+# Project-specific
+models_cache/
+*.tif
+*.tiff
+*.jp2
+*.nitf
+*.h5
+*.hdf
+*.zarr/
+data/large/
+results/
+outputs/
+runs/
+mlruns/
+wandb/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Allow vendored sample data
+!tests/fixtures/**/*.tif
+!tests/fixtures/**/*.tiff
+!data/sample/**/*.tif

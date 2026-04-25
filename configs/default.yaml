@@ -1,0 +1,36 @@
+# Default Mokashif pipeline configuration.
+# All keys mirror src/mokashif/config.py and can be overridden on the CLI.
+
+io:
+  target_resolution_m: null
+  target_crs: null
+  resampling: bilinear
+
+preprocess:
+  coregister: true
+  cloud_mask: false
+  normalize: percentile
+  percentile_low: 2.0
+  percentile_high: 98.0
+
+tiling:
+  tile_size: 512
+  overlap: 64
+  pad_value: 0.0
+
+model:
+  encoder: dinov2_base
+  use_prithvi: false
+  similarity: cosine
+  weights_dir: ./models_cache
+
+postprocess:
+  confidence_threshold: 0.5
+  min_object_area_m2: 100.0
+  morphology_kernel: 3
+  calibrate: true
+
+device: auto
+batch_size: 8
+num_workers: 4
+offline: false
